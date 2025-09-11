@@ -5,7 +5,7 @@ public class Nim {
         Scanner scan = new Scanner(System.in);
         int sticks = 7;
         while (sticks > 0) {
-        System.out.print("There are " + sticks + " in the pile? You can draw one or two, how many will you draw?");
+        System.out.println("There are " + sticks + " in the pile? You can draw one or two, how many will you draw?");
         int draw = scan.nextInt();
         if (draw == 2) {
             sticks = sticks - 2;
@@ -13,7 +13,7 @@ public class Nim {
             if (sticks == 0) { 
                 System.out.println("You drew the last two sticks. You won!");
             }
-            if (sticks != 0) {
+            if (sticks > 1) {
                 int cdraw = (int)(Math.random()*2 + 1);
                 sticks = sticks - cdraw;
                 System.out.println("The computer drew " + cdraw + " sticks. There are " + sticks + " in the pile now.");
@@ -46,6 +46,7 @@ public class Nim {
                     }
                 }
             }
+        }
         else {
             System.out.println("That is an invalid move. Please choose to draw 1 or 2 sticks.");
             System.out.println("There are " + sticks + " sticks in the pile still");
@@ -117,5 +118,4 @@ public class Nim {
     }
         }
     }
-}
 
