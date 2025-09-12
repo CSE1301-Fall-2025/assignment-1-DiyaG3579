@@ -5,7 +5,7 @@ public class Nim {
         Scanner scan = new Scanner(System.in);
         int sticks = 7;
         while (sticks > 0) {
-        System.out.println("There are " + sticks + " in the pile? You can draw one or two, how many will you draw?");
+        System.out.println("There are sticks " + sticks + " in the pile? You can draw one or two, how many will you draw?");
         int draw = scan.nextInt();
         if (draw == 2) {
             sticks = sticks - 2;
